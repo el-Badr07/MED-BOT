@@ -1,0 +1,159 @@
+{
+    "report_text": "\n\n                                                                                                      Regd. No .: XXXX54826XX \n\n                                                                                   \u20ac   +91 12345 67890 \n              Labsmart Software \n                                                                                   [X] yourlabname@gmail.com \n\n              Sample Letterhead                                                        https://www.yourlabname.in/ \n\n                                                                                                                 Scan to download \n                                                                                  1001 \nMr. Saubhik Bhaumik \n                                                                                : 17/10/2024 04:55 PM \n Age / Sex   : 27 YRS / M                                          Registered on \n                                                                   Collected on : 17/10/2024 \n Referred by : Self \n                                                                   Received on : 17/10/2024 \n Reg. no.    : 1001 \n                                                                   Reported on : 17/10/2024 04:55 PM \n\n                                                      HAEMATOLOGY \n                                             COMPLETE BLOOD COUNT (CBC) \n TEST                                               VALUE                     UNIT               REFERENCE \nHEMOGLOBIN                                          15                        g/dl                13 - 17 \n TOTAL LEUKOCYTE COUNT                              5,100                     cumm               4,800 - 10,800 \n DIFFERENTIAL LEUCOCYTE COUNT \n       NEUTROPHILS                                   79                        %                  40 - 80 \n       LYMPHOCYTE                              L     18                        %                  20 - 40 \n       EOSINOPHILS                                   1                         %                  1 - 6 \n       MONOCYTES                               L     1                         %                  2 - 10 \n       BASOPHILS                                     1                         %                  < 2 \n PLATELET COUNT                                     3.5                       lakhs/cumm          1.5 - 4.1 \n TOTAL RBC COUNT                                    5                         million/cumm       4.5 - 5.5 \n HEMATOCRIT VALUE, HCT                              42                         %                  40 - 50 \n MEAN CORPUSCULAR VOLUME, MCV                       84.0                      fL                  83 - 101 \nMEAN CELL HAEMOGLOBIN, MCH                          30.0                      Pg                  27 - 32 \nMEAN CELL HAEMOGLOBIN CON, MCHC                H    35.7                       %                  31.5 - 34.5 \n\n  Clinical Notes: \n  A complete blood count (CBC) is used to evaluate overall health and detect a wide range of disorders, including anemia, \n  infection, and leukemia. There have been some reports of WBC and platelet counts being lower in venous blood than in \n  capillary blood samples, although still within these reference ranges. \n\n  Possible causes of abnormal parameters: \n                      High                                                Low \n   RBC, Hb, or HCT : Dehydration, polycythemia, shock, chronic hypoxia Anemia, thalassemia, and other hemoglobinopathies \n  MCV                 Macrocytic anemia, liver disease                    Microcytic anemia \n   WBC                Acute stress, infection, malignancies               Sepsis, marrow hypoplasia \n   Platelets          Risk of thrombosis                                  Risk of bleeding \n\n     Sachin                                                                                                     Asthe \n                                                                                                             AK \n\n  Mr. Sachin SAMPLE Sharma                                                                                    Dr. A. K. Asthana SAMPLE \n  DMLT, Lab Incharge                                       Page 1 of 2                                      MBBS, MD Pathologist \n\n                                             NOT VALID FOR MEDICO LEGAL PURPOSE \n\n                                           Work timings: Monday to Sunday, 8 am to 8 pm \n           Please correlate clinically. Although the test results are checked thoroughly, in case of any unexpected test results which \n           could be due to machine error or typing error or any other reason please contact the lab immediately for a free evaluation. \n<<<\f\n\n                                                                                                      Regd. No .: XXXX54826XX \n\n                                                                                  \u20ac   +91 12345 67890 \n             Labsmart Software \n                                                                                  [X] yourlabname@gmail.com \n\n             Sample Letterhead                                                        https://www.yourlabname.in/ \n\n                                                                                                                 Scan to download \n                                                                                 1001 \nMr. Saubhik Bhaumik \n                                                                  Registered on : 17/10/2024 04:55 PM \nAge / Sex   : 27 YRS / M \n                                                                  Collected on : 17/10/2024 \nReferred by : Self \n                                                                  Received on   : 17/10/2024 \nReg. no.    : 1001 \n                                                                  Reported on   : 17/10/2024 04:55 PM \n\n                                                     ~~~ End of report ~~~ \n\n    Sachin                                                                                                       Asthe \n                                                                                                             Ak \n\n  Mr. Sachin SAMPLE Sharma                                                                                   Dr. A. K. Asthana SAMPLE \n DMLT, Lab Incharge                                        Page 2 of 2                                     MBBS, MD Pathologist \n\n                                             NOT VALID FOR MEDICO LEGAL PURPOSE \n\n                                           Work timings: Monday to Sunday, 8 am to 8 pm \n\n          Please correlate clinically. Although the test results are checked thoroughly, in case of any unexpected test results which \n          could be due to machine error or typing error or any other reason please contact the lab immediately for a free evaluation. \n<<<\f",
+    "text": {
+        "regd_no": "XXXX54826XX",
+        "lab_name": "Labsmart Software",
+        "email": "yourlabname@gmail.com",
+        "sample_letterhead_url": "https://www.yourlabname.in/",
+        "scan_link": "Scan to download",
+        "patient_info": {
+            "id": "1001",
+            "patient_name": "Mr. Saubhik Bhaumik",
+            "age": "27 YRS",
+            "sex": "M",
+            "registered_on": "17/10/2024 04:55 PM",
+            "collected_on": "17/10/2024",
+            "referred_by": "Self"
+        },
+        "test_results": {
+            "haematology": {
+                "complete_blood_count_cbc": {
+                    "hemoglobin": {
+                        "value": 15,
+                        "unit": "g/dl",
+                        "reference_range": [
+                            13,
+                            17
+                        ]
+                    },
+                    "total_leukocyte_count": {
+                        "value": 5100,
+                        "unit": "cumm",
+                        "reference_range": [
+                            4800,
+                            10800
+                        ]
+                    }
+                }
+            },
+            "differential_leukocyte_count": {
+                "neutrophils": {
+                    "value": 79,
+                    "percentage": "%",
+                    "reference_range": [
+                        40,
+                        80
+                    ]
+                },
+                "lymphocytes": {
+                    "value": "L",
+                    "percentage": "%",
+                    "reference_range": [
+                        20,
+                        40
+                    ]
+                },
+                "eosinophils": {
+                    "value": 1,
+                    "percentage": "%",
+                    "reference_range": [
+                        1,
+                        6
+                    ]
+                },
+                "monocytes": {
+                    "value": "L",
+                    "percentage": "%",
+                    "reference_range": [
+                        2,
+                        10
+                    ]
+                },
+                "basophils": {
+                    "value": 1,
+                    "percentage": "%",
+                    "reference_range": "<2"
+                }
+            },
+            "platelet_count": {
+                "value": 3.5,
+                "unit": "lakhs/cumm",
+                "reference_range": [
+                    1500,
+                    411
+                ]
+            },
+            "total_rbc_count": {
+                "value": 5,
+                "unit": "million/cumm",
+                "reference_range": [
+                    4500,
+                    5500
+                ]
+            },
+            "hematocrit_value_hct": {
+                "value": 42,
+                "unit": "%",
+                "reference_range": [
+                    40,
+                    50
+                ]
+            },
+            "mean_corpuscular_volume_mcv": {
+                "value": 84.0,
+                "unit": "fL",
+                "reference_range": [
+                    83,
+                    101
+                ]
+            },
+            "mean_cell_hemoglobin_mch": {
+                "value": 30.0,
+                "unit": "Pg",
+                "reference_range": [
+                    27,
+                    32
+                ]
+            },
+            "mean_cell_hemoglobin_con_mchc": {
+                "value": 35.7,
+                "unit": "%",
+                "reference_range": [
+                    31.5,
+                    34.5
+                ]
+            }
+        },
+        "clinical_notes": [
+            "A complete blood count (CBC) is used to evaluate overall health and detect a wide range of disorders, including anemia, infection, and leukemia.",
+            "There have been some reports of WBC and platelet counts being lower in venous blood than in capillary blood samples, although still within these reference ranges."
+        ],
+        "possible_causes": {
+            "abnormal_parameters": [
+                {
+                    "parameter": "RBC",
+                    "high_cause": "Dehydration, polycythemia, shock, chronic hypoxia"
+                },
+                {
+                    "parameter": "Hb",
+                    "high_cause": "Dehydration, polycythemia, shock, chronic hypoxia"
+                },
+                {
+                    "parameter": "HCT",
+                    "high_cause": "Dehydration, polycythemia, shock, chronic hypoxia"
+                },
+                {
+                    "parameter": "WBC",
+                    "low_cause": "Machine error or typing error"
+                }
+            ]
+        },
+        "work_timings": {
+            "day": "Monday to Sunday",
+            "time": "8 am to 8 pm"
+        },
+        "evaluation_instruction": [
+            "Please correlate clinically. Although the test results are checked thoroughly, in case of any unexpected test results which could be due to machine error or typing error, please contact the lab immediately for a free evaluation."
+        ]
+    }
+}
