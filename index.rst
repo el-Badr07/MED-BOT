@@ -1,8 +1,8 @@
 Welcome to MED-BOT documentation!
 ====================================
 
-.. figure:: logo.jpeg
-   :width: 70%
+.. figure:: logo.jpg
+   :width: 40%
    :align: left
    :alt: Alternative text for the image
    :name: logo
