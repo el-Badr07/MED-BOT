@@ -12,7 +12,7 @@ This pipeline consists of several key stages:
    - The first step is to extract text from a medical document (e.g., a PDF report) using an external service like **LLMWhisperer**. This step converts unstructured medical report data into machine-readable text.
  - Lab report Exemple:
 .. figure:: lab_report.png
-   :width: 50%
+   :width: 60%
    :align: center
    :alt: medical document analysis
    :name: Pipeline
