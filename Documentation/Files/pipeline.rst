@@ -38,10 +38,10 @@ Pipeline Overview
    rich pool of relevant information.
 
           .. figure:: Hybrid_retriever.png
-            :width: 40%
-            :align: left
-            :alt: medical document analysis
-            :name: Pipeline
+             :width: 60%
+             :align: center
+             :alt: medical document analysis
+             :name: Pipeline
 
 4. **Reciprocal Ranking**:
    The retrieved contexts are passed through a **Reciprocal Ranker**. This
@@ -62,10 +62,10 @@ Pipeline Overview
      **Psychology**.
 
     .. figure:: Query_router.png
-         :width: 50%
-         :align: center
-         :alt: medical document analysis
-         :name: Pipeline
+       :width: 60%
+       :align: center
+       :alt: medical document analysis
+       :name: Pipeline
 
 6. **LLM (Large Language Model) Response Generation**:
    Finally, the routed query and the top-ranked context are passed to a **Large
