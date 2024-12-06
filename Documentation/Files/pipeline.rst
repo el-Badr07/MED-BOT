@@ -37,6 +37,12 @@ Pipeline Overview
    The retrieved contexts from both BM25 and Chroma are aggregated to form a
    rich pool of relevant information.
 
+          .. figure:: Hybrid_retriever.png
+            :width: 40%
+            :align: left
+            :alt: medical document analysis
+            :name: Pipeline
+
 4. **Reciprocal Ranking**:
    The retrieved contexts are passed through a **Reciprocal Ranker**. This
    componenttechnique to combine the results from multiple retrieval sources and rank them according to their relevance to the user query. This ensures that the most pertinent and valuable documents are prioritized for the subsequent response generation step.
@@ -45,7 +51,7 @@ Pipeline Overview
    At this stage, the system performs **Semantic Routing** to determine which
    domain (Medical, Biology, or Psychology) the query belongs to.
    
-   - Using a **semantic classifier**, the system routes the query and its context
+   - Using a chain, the system routes the query and its context
      to the appropriate prompt template based on the field it belongs to. This
      ensures that the query is answered by leveraging domain-specific knowledge.
    
@@ -54,6 +60,12 @@ Pipeline Overview
      **Medical** field.
    - If the query is related to brain functionality, it might be routed to
      **Psychology**.
+
+    .. figure:: Query_router.png
+         :width: 50%
+         :align: center
+         :alt: medical document analysis
+         :name: Pipeline
 
 6. **LLM (Large Language Model) Response Generation**:
    Finally, the routed query and the top-ranked context are passed to a **Large
