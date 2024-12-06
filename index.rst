@@ -14,5 +14,5 @@ Welcome to MED-BOT documentation!
    :caption: Table of Content:
 
    Documentation/Files/Overview
-   Documentation/scripts/1_Pipeline
+   Documentation/Files/Equipe
    Documentation/scripts/2_Group_Members
