@@ -29,6 +29,5 @@ In this section, we demonstrate how to build a chatbot using RAG to answer quest
 ### Requirements
 
 In order to run this app, we need to install the required dependencies using pip. To do that, make sure to use the code below:
-
-```bash
-$ pip install -r requirements.txt
+.. code-block:: bash
+    $ pip install -r requirements.txt
