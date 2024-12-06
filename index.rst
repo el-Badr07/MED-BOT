@@ -13,6 +13,6 @@ Welcome to MED-BOT documentation!
    :maxdepth: 2
    :caption: Table of Content:
 
-   README.md
+   Documentation/Files/Overview
    Documentation/scripts/1_Pipeline
    Documentation/scripts/2_Group_Members
