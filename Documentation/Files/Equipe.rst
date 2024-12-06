@@ -2,7 +2,7 @@ Equipe
 ======================================
 
 .. figure:: Equipe.jpg
-   :width: 50%
+   :width: 40%
    :align: left
    :alt: Alternative text for the image
    :name: Equipe
@@ -12,9 +12,9 @@ Notre équipe st composé de 2 personnes sous l'encadrement de Mr Tawfik Masrour
 Encadrants : 
 ----------------
     - **Encadrant 1**: Masrour Tawfik |linkedin_Masrour|
-.. |linkedin_Masrour| image:: Linkedin.png
-    :width: 16
-    :height: 16
+.. |linkedin_Masrour| image:: linkedin.png
+    :width: 20
+    :height: 20
     
 Les membres :
 --------------
