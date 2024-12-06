@@ -15,4 +15,4 @@ Welcome to MED-BOT documentation!
 
    Documentation/Files/Overview
    Documentation/Files/Equipe
-   Documentation/scripts/2_Group_Members
+   Documentation/Files/pipeline
