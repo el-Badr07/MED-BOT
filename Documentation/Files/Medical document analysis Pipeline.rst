@@ -10,6 +10,12 @@ This pipeline consists of several key stages:
 
 1. **Text Extraction Using Whisperer**:
    - The first step is to extract text from a medical document (e.g., a PDF report) using an external service like **LLMWhisperer**. This step converts unstructured medical report data into machine-readable text.
+ - Lab report Exemple:
+.. figure:: lab_report.png
+   :width: 50%
+   :align: center
+   :alt: medical document analysis
+   :name: Pipeline
 
 2. **Data Structuring**:
    - Once the text is extracted, a **PromptTemplate** is used to instruct an LLM to convert the extracted text into a structured **JSON** format. This is essential for organizing the raw data into a format that can be easily queried and analyzed.
