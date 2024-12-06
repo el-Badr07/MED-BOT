@@ -14,6 +14,12 @@ This pipeline consists of several key stages:
 2. **Data Structuring**:
    - Once the text is extracted, a **PromptTemplate** is used to instruct an LLM to convert the extracted text into a structured **JSON** format. This is essential for organizing the raw data into a format that can be easily queried and analyzed.
 
+.. figure:: json_output.png
+   :width: 30%
+   :align: left
+   :alt: medical document analysis
+   :name: Pipeline
+
 3. **Data Analysis and Interpretation**:
    - The structured **JSON** data is then passed to an LLM model for further analysis. Based on the provided JSON data, the model answers specific questions related to the patient's medical information. These questions can include:
      - Summarizing key findings
