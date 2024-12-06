@@ -16,3 +16,6 @@ Welcome to MED-BOT documentation!
    Documentation/Files/Overview
    Documentation/Files/Equipe
    Documentation/Files/pipeline
+   Documentation/Files/Medical document analysis Pipeline
+
+
