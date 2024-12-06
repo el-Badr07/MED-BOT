@@ -102,35 +102,5 @@ Key Components
    Leverages large language models to synthesize a response based on the user
    query and the relevant context.
 
-Benefits of This Pipeline
-=========================
-
-1. **High Accuracy**:
-   By using ensemble retrieval methods (BM25 and Chroma), the system is able
-   to retrieve highly relevant context, leading to more accurate and contextually
-   rich answers.
-
-2. **Domain-Specific Expertise**:
-   The semantic router ensures that the query is handled by the correct domain
-   (Medical, Biology, or Psychology), which results in more informed and specific
-   answers.
-
-3. **Flexible and Scalable**:
-   The pipeline is designed to handle queries from multiple domains and can be
-   extended to include additional fields (e.g., Chemistry, Physics) in the future.
-
-4. **Optimized for Contextual Relevance**:
-   The combination of reciprocal ranking and semantic routing ensures that only
-   the most relevant context is passed to the LLM for response generation.
-
-5. **User-Friendly**:
-   The system provides users with accurate, relevant, and context-aware responses,
-   improving the user experience in fields like medical diagnosis, biology research,
-   and psychological support.
-
-This pipeline represents an advanced, domain-specific system that leverages
-state-of-the-art techniques in retrieval, ranking, and language modeling to provide
-accurate and context-aware answers across multiple fields. It’s designed for real-time
-applications where fast, accurate, and domain-specific information is crucial.
 
 
