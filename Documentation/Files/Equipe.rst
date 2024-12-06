@@ -12,7 +12,7 @@ Notre équipe st composé de 2 personnes sous l'encadrement de Mr Tawfik Masrour
 Encadrants : 
 ----------------
     - **Encadrant 1**: Masrour Tawfik |linkedin_Masrour|
-.. |linkedin_Masrour| image:: ../Images/LinkedIn_Logo.jpeg
+.. |linkedin_Masrour| image:: Linkedin.png
     :width: 16
     :height: 16
     
