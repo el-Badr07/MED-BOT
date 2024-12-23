@@ -15,6 +15,19 @@ from langchain import hub
 
 
 
+from langchain_nvidia_ai_endpoints import ChatNVIDIA
+
+
+
+
+from tavily import TavilyClient
+client = TavilyClient(api_key="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")
+
+# Step 2. Executing a simple search query
+
+
+
+
 # First, let's create our vector stores for Collection A and B
 def create_vector_store(texts: List[str], collection_name: str):
     embeddings=OllamaEmbeddings(model="mxbai-embed-large:latest")
@@ -57,6 +70,13 @@ def calculator(expression: str) -> float:
         return f"Error evaluating expression: {str(e)}"
 
 # Create the agent with tools
+
+@tool
+def tavily_search(query: str) -> str:
+    """Use Tavily Client's search functionality."""
+    context = client.get_search_context(query)
+    return context  # or modify the returned data as needed
+
 def create_rag_agent():
     # Initialize the language model
     
@@ -66,9 +86,21 @@ def create_rag_agent():
         #search_collection_a,
         #search_collection_b,
         calculator,
-        DuckDuckGoSearchRun()
+        tavily_search
     ]
-    llm = ChatOllama(model="llama3.2").bind_tools(tools=tools)
+    #llm1 = ChatOllama(model="llama3.2",tools=tools)
+    llm = ChatNVIDIA(
+        model="nvidia/nemotron-4-340b-instruct",
+        api_key="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", 
+        temperature=0.2,
+        top_p=0.7,
+        max_tokens=1024,
+        ).bind_tools(tools=[
+        #search_collection_a,
+        #search_collection_b,
+        calculator,
+        tavily_search
+    ])
     # Create the agent prompt
     
 
@@ -172,4 +204,4 @@ def safe_query_processing(query: str):
 
 
 
-print(process_query('calculate 3+2'))
+print(process_query('do you have knowledge in medical field and can you respond to some questions in it'))
