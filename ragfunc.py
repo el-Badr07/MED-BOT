@@ -438,6 +438,57 @@ class QueryRouter:
         
         return semantic_router
 
+def merge_results(bm25_results, chroma_results, bm25_weight=0.4, chroma_weight=0.6, top_k=5):
+    """
+    Merges results from BM25 and Chroma, then selects the top-k results.
+    Args:
+        bm25_results (list): List of (doc_id, bm25_score) tuples from BM25.
+        chroma_results (dict): Results from Chroma containing documents and distances.
+        bm25_weight (float): Weight for BM25 scores.
+        chroma_weight (float): Weight for Chroma scores.
+        top_k (int): Number of top results to return.
+    Returns:
+        list: Top-k results sorted by combined score.
+    """
+    # Normalize BM25 scores
+    bm25_max_score = max(bm25_results, key=lambda x: x[1])[1] if bm25_results else 1
+    normalized_bm25 = {idx: score / bm25_max_score for idx, score in bm25_results}
+
+    # Normalize Chroma distances (convert to similarity scores)
+    chroma_docs = chroma_results["documents"]
+    chroma_distances = chroma_results["distances"]
+    chroma_max_distance = max(chroma_distances) if chroma_distances else 1
+    normalized_chroma = {
+        chroma_docs[i]: 1 - (chroma_distances[i] / chroma_max_distance)
+        for i in range(len(chroma_docs))
+    }
+
+    # Combine scores
+    combined_scores = {}
+    for doc_id, bm25_score in normalized_bm25.items():
+        combined_scores[doc_id] = bm25_weight * bm25_score
+
+    for doc in normalized_chroma.keys():
+        if doc in combined_scores:
+            combined_scores[doc] += chroma_weight * normalized_chroma[doc]
+        else:
+            combined_scores[doc] = chroma_weight * normalized_chroma[doc]
+
+    # Sort by score and return top-k results
+    sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
+    return sorted_results[:top_k]
+
+
+from rank_bm25 import BM25Okapi
+def bm25_func(text:str):
+    bm25=BM25Okapi()
+    query = "machine learning and AI"
+    tokenized_query = query.split()
+    bm25_scores = bm25.get_scores(tokenized_query)
+    bm25_results = sorted(
+        enumerate(bm25_scores), key=lambda x: x[1], reverse=True)
+    return bm25_results
+
 # Example usage
 
 if __name__ == "__main2__":
