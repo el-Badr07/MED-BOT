@@ -6,6 +6,8 @@ from langchain_core.output_parsers import JsonOutputParser
 
 #client = LLMWhispererClientV2()
 # Provide the base URL and API key explicitly
+#Return the result as a valid JSON object without any additional text or comments.
+
 def interpret_json(file):
     client = LLMWhispererClientV2(base_url="https://llmwhisperer-api.us-central.unstract.com/api/v2", api_key="FdutG4XNpnK5ILGwYTei2WWhhdnSEan-oMurX2jVUEE")
     def llmwhisper(file_path1):
