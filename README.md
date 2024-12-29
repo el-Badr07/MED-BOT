@@ -88,8 +88,7 @@ streamlit run LLM.py.py
 
 ## 📚 Documentation
 
-Comprehensive documentation is available at [medical-bot.readthedocs.io](https://medical-bot.readthedocs.io/)
-
+Comprehensive documentation is available at [https://med-bot.readthedocs.io/en/latest/]
 
 Project Link: [https://github.com/el-Badr07/medical-bot]
 
