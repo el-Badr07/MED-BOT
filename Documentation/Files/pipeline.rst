@@ -8,7 +8,7 @@ domain-specific responses (Medical, Biology, and Psychology) by combining
 state-of-the-art retrieval and language generation techniques.
 
 Pipeline Overview
-=================
+--------
 
 1. **User Query Input**:
    The process begins when a user submits a query related to medical, biological,
@@ -38,7 +38,7 @@ Pipeline Overview
    rich pool of relevant information.
 
           .. figure:: Hybrid_retriever.png
-             :width: 60%
+             :width: 40%
              :align: center
              :alt: medical document analysis
              :name: Pipeline
@@ -84,14 +84,14 @@ Pipeline Overview
    context and domain-specific knowledge.
 
 Flow Summary
-============
+--------
 
 1. **User Query** → 2. **Multi-Query Generation** → 3. **Ensemble Context Retrieval (BM25 + Chroma)**
 → 4. **Reciprocal Ranking** → 5. **Semantic Routing (Medical, Biology, Psychology)** →
 6. **LLM Response Generation** → 7. **Final Answer to User**.
 
 Key Components
-==============
+--------
 
 1. **Multi-Query Generation Chain**:
    Expands the user query to capture different phrasings, helping to gather
