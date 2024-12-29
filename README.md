@@ -24,24 +24,28 @@ An intelligent medical information retrieval system that combines advanced RAG (
 
 In this section, we demonstrate how to build a chatbot using RAG to answer questions based on a given context. We’ll use **Ollama models** and **embeddings** to create a simple Streamlit app capable of answering questions based on context ingested in a vector store database.
 
-### Requirements 
-In order to run this app we need to install first our requirements dependencies using pip, to do that make sure to use the code below:
+# Docker Image Documentation
+
+## Overview
+
+This Docker image provides a containerized version of the `medbot` application, ready to run in any environment that supports Docker.
+
+The Docker image includes everything needed to run the app, including the necessary libraries and dependencies. This image is designed to work for anyone needing to deploy the app in a consistent and isolated environment.
+
+## Prerequisites
+
+Before using the image, make sure you have the following:
+
+- Docker installed on your system.
+- Access to Docker Hub or the ability to pull from a private registry.
+
+## How to Pull the Image
+
+To download or "pull" the image from Docker Hub, use the following command:
+
 ```bash
-$ pip install -r requirements.txt
-
+docker pull ion780/medbot:latest
 ```
-
-### Steps:
-
-1. **Ingesting Documents**: 
-   - The `ingest.py` script processes documents from the `documents` folder. This script extracts text from documents, splits it into chunks, generates embeddings, and stores them in a Chroma vector database.
-   
-2. **Generating Answers**:
-   - The `LLM.py` script retrieves answers using the ingested database. Optionally, it can answer queries based on a PDF uploaded by the user.
-
----
-
-
 
 ## Ollama
 
@@ -51,8 +55,8 @@ You can download Ollama from its [official website](https://ollama.com/).
 
 ---
 
-## 🚀 Quick Start
-
+## Getting started:
+In order to run this app we need to install first our requirements dependencies using pip, to do that make sure to use the code below:
 ```bash
 # Clone the repository
 git clone https://github.com/el-Badr07/medical-bot
@@ -66,27 +70,22 @@ venv\Scripts\activate     # Windows
 # Install dependencies
 pip install -r requirements.txt
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your configurations
+cd MED-BOT
 
 # Run the application
-python medical_bot/main.py
+streamlit run LLM.py.py
 ```
-
-
 
 ## 📚 Documentation
 
 Comprehensive documentation is available at [medical-bot.readthedocs.io](https://medical-bot.readthedocs.io/)
 
 
-
-
 Project Link: [https://github.com/el-Badr07/medical-bot]
 
 ## 🗺️ Feature improvements
 
-- [ ] Add support for medical imaging analysis
+- [ ] Add support for medical imaging analysis with vlms
 - [ ] Implement some agents to help the retrieval and context refinement
-- [ ] Generalise the pipeline to multiple fields 
+- [ ] Generalise the pipeline to multiple fields
+- [ ] Add audio input and multilanguage support
