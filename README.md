@@ -1,24 +1,18 @@
 # Medical Bot with Advanced RAG Pipeline 🏥 🤖
-
-An intelligent medical information retrieval system that combines advanced RAG (Retrieval-Augmented Generation) pipeline with comprehensive medical document analysis capabilities.
 ## Overview
 
-The **Medical Bot** is an intelligent and powerful healthcare solution designed to assist both medical professionals and patients by providing accurate, evidence-based medical information. It leverages the cutting-edge **Retrieval-Augmented Generation (RAG)** pipeline, which enhances traditional AI models by combining the power of document retrieval and generative language models. This hybrid approach allows the bot to access and retrieve relevant medical documents from vast datasets, analyze them, and generate responses tailored to user queries.
+The **Medical Bot** is an intelligent and powerful healthcare solution designed to assist both medical professionals and patients by providing accurate, evidence-based medical information. It leverages **Advanced Retrieval-Augmented Generation (RAG)** pipeline with the use of **multi agents system**, which enhances traditional AI models by combining the power of document retrieval and generative language models. This hybrid approach allows the bot to access and retrieve relevant medical documents from vast datasets, analyze them, and generate responses tailored to user queries.
 
-With this system, users can interact with the bot to receive answers grounded in the latest medical research, guidelines, and patient-specific data. It processes both structured data, such as medical records and diagnosis codes, and unstructured data, such as medical research articles, making it highly versatile and capable of supporting a wide variety of medical use cases.
-
-The bot can be integrated into telemedicine platforms, used for patient education, and serve as a decision support tool for healthcare providers. By delivering accurate, context-aware responses in real time, it improves clinical decision-making, enhances patient engagement, and supports healthcare innovation.
-
-This solution is designed to seamlessly integrate with existing healthcare infrastructures, ensuring that medical professionals and institutions can leverage it without significant changes to their workflows.
-
+With this system, users can interact with the bot to receive answers grounded in the latest medical research, guidelines, and patient-specific data. It can process medical records Lab reports, medical research articles,etc, making it highly versatile and capable of supporting a wide variety of medical use cases.
 
 ## 🌟 Features
 
 - **Advanced RAG Pipeline**
   - Context-aware information retrieval and chuncking
   - Hybrid Semantic search capabilities
-  - Dynamic document ranking
+  - Dynamic document ranking (BM25+semantic retriever)
   - Query routing
+  - Multi agent System
 
 - **Medical Document Analysis**
   - Insight generation 
@@ -67,6 +61,9 @@ Ollama is a library built on top of the Hugging Face Transformers library, offer
 You can download Ollama from its [official website](https://ollama.com/).
 
 ---
+## Multi Agent System (crewai)
+
+Multi-Agent Systems involve multiple autonomous agents that collaborate to solve complex tasks. Each agent specializes in a specific aspect of the task, and they communicate and coordinate with each other to improve efficiency and decision-making. This collaborative approach allows for scalable and flexible solutions.in our case we used **Crew.ai** which is a powerful platform that facilitates the creation and management of multi-agent systems. It enables the orchestration of decentralized agents, allowing them to work together seamlessly across various domains like automation, AI, and healthcare. With its modular architecture, Crews.ai simplifies the development and deployment of complex, collaborative solutions.
 
 ## Getting started:
 In order to run this app we need to install first our requirements dependencies using pip, to do that make sure to use the code below:
