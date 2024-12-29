@@ -7,16 +7,16 @@ Equipe
    :alt: Alternative text for the image
    :name: Equipe
 
-Notre équipe st composé de 2 personnes sous l'encadrement de Mr Tawfik Masrour.
+Our team is formed from 2 members with the guidance of Mr Tawfik Masrour.
 
-Encadrants : 
+SUPERVISOR : 
 ----------------
     - **Encadrant 1**: Masrour Tawfik |linkedin_Masrour|
 .. |linkedin_Masrour| image:: linkedin.png
     :width: 20
     :height: 20
     
-Les membres :
+MEMBRES :
 --------------
 
     - **Membre 1**: ELHOT BADR 
