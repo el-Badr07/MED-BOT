@@ -27,7 +27,7 @@ With this system, users can interact with the bot to receive answers grounded in
 
 In this section, we demonstrate how to build a chatbot using RAG to answer questions based on a given context. We’ll use **Ollama models** and **embeddings** to create a simple Streamlit app capable of answering questions based on context ingested in a vector store database.
 
-# Docker Image Documentation
+## Docker Image Documentation
 
 ## Overview
 
