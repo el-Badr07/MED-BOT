@@ -13,11 +13,10 @@ Welcome to MED-BOT documentation!
    :maxdepth: 2
    :caption: Table of Content:
 
-
    Documentation/Files/main.rst
    Documentation/Files/Equipe.rst
    Documentation/Files/Chatbot pipeline.rst
-   Documentation/Files/Medical document analysis.rst
+   Documentation/Files/Medical document analysis Pipeline.rst
    Documentation/Files/cancerclassifier.rst
 
 
