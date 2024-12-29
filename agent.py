@@ -1,4 +1,19 @@
+import ssl
+
+# Disable SSL certificate verification globally
+ssl._create_default_https_context = ssl._create_unverified_context
+
 import os
+import urllib3
+import requests
+
+# Suppress only the single warning from urllib3 needed.
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+session = requests.Session()
+session.verify = False
+
+requests.sessions.Session = lambda: session
 from typing import List
 from langchain_core.tools import Tool
 from langchain_core.prompts import ChatPromptTemplate
@@ -12,6 +27,12 @@ from langchain_community.chat_models import ChatOllama
 from langchain_community.embeddings.ollama import OllamaEmbeddings
 from langchain_core.prompts import PromptTemplate
 from langchain import hub
+
+
+# ...existing code...
+
+
+# ...existing code...
 
 
 
@@ -85,7 +106,7 @@ def create_rag_agent():
     tools = [
         #search_collection_a,
         #search_collection_b,
-        calculator,
+        #calculator,
         tavily_search
     ]
     #llm1 = ChatOllama(model="llama3.2",tools=tools)
@@ -163,15 +184,6 @@ def create_rag_agent():
     prompt= hub.pull("hwchase17/react")
 
 
-
-    
-
-     
-     
-
-            
-   
-
     # Create the ReAct agent
     agent = create_react_agent(llm, tools, prompt)
 
@@ -185,6 +197,73 @@ def create_rag_agent():
 
     return agent_executor
 
+def evaluate_context_sufficiency(context: str, query: str) -> bool:
+    """Evaluate if the context is sufficient to answer the query."""
+    
+    evaluation_template = """
+    You are a context evaluation agent. Analyze if the given context is sufficient to answer the query.
+    
+    Context: {context}
+    Query: {query}
+    
+    Instructions:
+    1. Analyze the relevance of context to the query
+    2. Check if context contains enough details
+    3. Determine if web search would be neccessary to answer the query or not
+    
+    Respond with either 'SUFFICIENT' or 'INSUFFICIENT'
+    
+    Thought: Let me analyze the context and query...
+    Decision:"""
+    
+    evaluation_prompt = PromptTemplate.from_template(evaluation_template)
+    
+    llm = ChatOllama(model="mistral")
+    chain = evaluation_prompt | llm | StrOutputParser()
+    
+    result = chain.invoke({"context": context,
+        "query": query
+    })
+    
+    return "SUFFICIENT" in result.upper()
+
+
+def evaluate_context(context: str, query: str) -> bool:
+    eval_template = """
+    Analyze if this context is sufficient to answer the query.
+    Context: {context}
+    Query: {query}
+    Return only 'SUFFICIENT' or 'INSUFFICIENT'
+    """
+    
+    eval_prompt = PromptTemplate.from_template(eval_template)
+    eval_chain = eval_prompt | ChatOllama(model="mistral") | StrOutputParser()
+    result = eval_chain.invoke({"context": context, "query": query})
+    return "SUFFICIENT" in result.upper()
+
+def enhance_context(original_context: str, query: str) -> str:
+    search_tool = DuckDuckGoSearchRun()
+    search_results = search_tool.run(query)
+    return f"{original_context}\n\nAdditional Information:\n{search_results}"
+
+def process_query(query: str) -> str:
+    # Initialize agent
+    agent = create_rag_agent()
+    
+    # Get initial context
+    context = get_initial_context(query)  # Your existing context retrieval
+    
+    # Evaluate context sufficiency
+    if not evaluate_context(context, query):
+        context = enhance_context(context, query)
+    
+    # Process with enhanced context
+    result = agent.invoke({
+        "input": query,
+        "context": context
+    })
+    
+    return result["output"]
 # Example usage function
 def process_query(query: str):
     agent = create_rag_agent()
@@ -201,7 +280,53 @@ def safe_query_processing(query: str):
             "error": True
         }
     
+def process_query2():
+    llm = ChatNVIDIA(
+        model="nvidia/nemotron-4-340b-instruct",
+        api_key="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", 
+        temperature=0.2,
+        top_p=0.7,
+        max_tokens=3024,
+        )
+    medical_template = ChatPromptTemplate.from_template("""You are an experienced and compassionate medical professional. You are great at answering medical questions, explaining symptoms, treatments, and diagnoses in a clear and empathetic way. You provide evidence-based information and make sure to address the patient's concerns carefully. If you're uncertain about a specific medical question, you acknowledge that and recommend consulting a healthcare provider. 
+    Answer the following question based on this context:
+    {context}
+    Question: {question}
+    """)
+    formated=medical_template.invoke({"context": "no context", "question": "What is the treatment for diabetes?"})
+    response = llm.invoke(formated)
+    return response
+    
 
 
 
-print(process_query('do you have knowledge in medical field and can you respond to some questions in it'))
+#print(process_query('Real-world diagnostic, referral, and treatment patterns in early Alzheimer’s disease'))
+#print(process_query2())
+
+from agentscrewai import AgentSystem
+def process_medical_query(query: str, context: str = "") -> str:
+    try:
+        # Initialize the agent system
+        system = AgentSystem()
+        
+        # Process query with context
+        result = system.process_query(query, context)
+        
+        return result
+    
+    except Exception as e:
+        print(f"Error processing query: {str(e)}")
+        return "Error processing your request"
+
+def main():
+    # Example usage
+    query = "What are the symptoms of diabetes?"
+    context = """Diabetes is a metabolic disease that causes high blood sugar. 
+                 The hormone insulin moves sugar from the blood into your cells 
+                 to be stored or used for energy."""
+    
+    result = process_medical_query(query, context)
+    print(f"Response: {result}")
+
+if __name__ == "__main__":
+    main()

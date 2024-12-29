@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'MED-BOT'
-copyright = '2024, GIIA'
-#author = 'GIIA'
+copyright = '2024, GIIA, BADR'
+#author = 'BADR'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

@@ -82,6 +82,7 @@ def main():
     if all_documents:
         combined_texts = [doc.page_content for doc in all_documents]
         ingest_into_vector_store1(combined_texts)
+        print("Data has been processed and ingested into the vector store.")
     else:
         print("No data to process.")
 
