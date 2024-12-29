@@ -13,7 +13,9 @@ Welcome to MED-BOT documentation!
    :maxdepth: 2
    :caption: Table of Content:
 
+
    Documentation/Files/Overview
+   Readme
    Documentation/Files/Equipe
    Documentation/Files/pipeline
    Documentation/Files/Medical document analysis Pipeline
