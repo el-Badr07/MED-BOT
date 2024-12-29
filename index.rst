@@ -17,6 +17,7 @@ Welcome to MED-BOT documentation!
    Documentation/Files/main.rst
    Documentation/Files/Equipe
    Documentation/Files/Chatbot pipeline
-   Documentation/Files/Medical document analysis 
+   Documentation/Files/Medical document analysis
+   Documentation/Files/cancerclassifier.rst
 
 
