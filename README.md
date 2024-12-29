@@ -46,7 +46,11 @@ To download or "pull" the image from Docker Hub, use the following command:
 ```bash
 docker pull ion780/medbot:latest
 ```
+Once the image is pulled, you can start a container from it. Here’s how to do it:
 
+```bash
+docker run -d -p 8501:8501 --name myapp-container ion780/medbot:latest
+```
 ## Ollama
 
 Ollama is a library built on top of the Hugging Face Transformers library, offering an easy way to implement Retriever-Augmented Generation (RAG) in projects. With a simple API, Ollama enables seamless integration of any retriever and generator model from the Hugging Face model hub. 
