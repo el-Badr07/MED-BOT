@@ -1,6 +1,15 @@
 # Medical Bot with Advanced RAG Pipeline 🏥 🤖
 
 An intelligent medical information retrieval system that combines advanced RAG (Retrieval-Augmented Generation) pipeline with comprehensive medical document analysis capabilities.
+## Overview
+
+The **Medical Bot** is an intelligent and powerful healthcare solution designed to assist both medical professionals and patients by providing accurate, evidence-based medical information. It leverages the cutting-edge **Retrieval-Augmented Generation (RAG)** pipeline, which enhances traditional AI models by combining the power of document retrieval and generative language models. This hybrid approach allows the bot to access and retrieve relevant medical documents from vast datasets, analyze them, and generate responses tailored to user queries.
+
+With this system, users can interact with the bot to receive answers grounded in the latest medical research, guidelines, and patient-specific data. It processes both structured data, such as medical records and diagnosis codes, and unstructured data, such as medical research articles, making it highly versatile and capable of supporting a wide variety of medical use cases.
+
+The bot can be integrated into telemedicine platforms, used for patient education, and serve as a decision support tool for healthcare providers. By delivering accurate, context-aware responses in real time, it improves clinical decision-making, enhances patient engagement, and supports healthcare innovation.
+
+This solution is designed to seamlessly integrate with existing healthcare infrastructures, ensuring that medical professionals and institutions can leverage it without significant changes to their workflows.
 
 
 ## 🌟 Features
