@@ -15,9 +15,8 @@ Welcome to MED-BOT documentation!
 
 
    Documentation/Files/main.rst
-   Documentation/Files/Overview
    Documentation/Files/Equipe
-   Documentation/Files/pipeline
-   Documentation/Files/Medical document analysis Pipeline
+   Documentation/Files/Chatbot pipeline
+   Documentation/Files/Medical document analysis 
 
 
