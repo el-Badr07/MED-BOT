@@ -29,20 +29,20 @@ In this section, we demonstrate how to build a chatbot using RAG to answer quest
 
 ## Docker Image Documentation
 
-## Overview
+### Overview
 
 This Docker image provides a containerized version of the `medbot` application, ready to run in any environment that supports Docker.
 
 The Docker image includes everything needed to run the app, including the necessary libraries and dependencies. This image is designed to work for anyone needing to deploy the app in a consistent and isolated environment.
 
-## Prerequisites
+### Prerequisites
 
 Before using the image, make sure you have the following:
 
 - Docker installed on your system.
 - Access to Docker Hub or the ability to pull from a private registry.
 
-## How to Pull the Image
+### How to Pull the Image
 
 To download or "pull" the image from Docker Hub, use the following command:
 
