@@ -35,13 +35,12 @@ In this section, we demonstrate how to build a chatbot using RAG to answer quest
 Docker Image Documentation
 --------------------------
 
-### Overview
-
 This Docker image provides a containerized version of the `medbot` application, ready to run in any environment that supports Docker.
 
 The Docker image includes everything needed to run the app, including the necessary libraries and dependencies. This image is designed to work for anyone needing to deploy the app in a consistent and isolated environment.
 
-### Prerequisites
+Prerequisites
+-----------------
 
 Before using the image, make sure you have the following:
 
@@ -52,10 +51,15 @@ Before using the image, make sure you have the following:
 
 To download or "pull" the image from Docker Hub, use the following command:
 
-```bash
-docker pull ion780/medbot:latest
+.. code-block:: bash
 
+    docker pull ion780/medbot:latest
 
+Once the image is pulled, you can start a container from it. Here’s how to run it:
+
+.. code-block:: bash
+
+    docker run -d -p 8501:8501 --name myapp-container ion780/medbot:latest
 
 
 Ollama
@@ -65,7 +69,6 @@ Ollama is a library built on top of the Hugging Face Transformers library, offer
 
 You can download Ollama from its `official website <https://ollama.com/>`_.
 
----
 
 Multi-Agent System (crewai)
 ----------------------------
@@ -77,23 +80,24 @@ Getting Started
 
 In order to run this app, you need to install the required dependencies using pip. To do that, make sure to follow the steps below:
 
-```bash
-# Clone the repository
-git clone https://github.com/el-Badr07/medical-bot
+.. code-block:: bash
 
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# or
-venv\Scripts\activate     # Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-cd MED-BOT
-
-# Run the application
-streamlit run LLM.py.py
+    # Clone the repository
+    git clone https://github.com/el-Badr07/medical-bot
+    
+    # Create and activate a virtual environment
+    python -m venv venv
+    source venv/bin/activate  # Linux/Mac
+    # or
+    venv\Scripts\activate     # Windows
+    
+    # Install dependencies
+    pip install -r requirements.txt
+    
+    cd MED-BOT
+    
+    # Run the application
+    streamlit run LLM.py.py
 
 
 📚 Documentation
@@ -101,7 +105,7 @@ streamlit run LLM.py.py
 
 Comprehensive documentation is available at `https://med-bot.readthedocs.io/en/latest/ <https://med-bot.readthedocs.io/en/latest/>`_
 
-Project Link: `https://github.com/el-Badr07/medical-bot <https://github.com/el-Badr07/medical-bot>`
+Project Link: `https://github.com/el-Badr07/medical-bot`
 
 🗺️ Feature Improvements
 -----------------------
