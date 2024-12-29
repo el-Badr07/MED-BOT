@@ -14,8 +14,8 @@ Welcome to MED-BOT documentation!
    :caption: Table of Content:
 
 
+   Documentation/Files/main.rst
    Documentation/Files/Overview
-   Readme
    Documentation/Files/Equipe
    Documentation/Files/pipeline
    Documentation/Files/Medical document analysis Pipeline
