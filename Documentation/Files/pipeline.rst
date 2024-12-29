@@ -116,4 +116,57 @@ Key Components
    query and the relevant context.
 
 
+Agent-Based Architecture
+=============================================
+
+Overview
+--------
+This system employs a set of agents to process queries, evaluate context sufficiency, and generate responses using a chain of tasks. The architecture consists of three main agents: **Orchestrator Agent**, **Context Evaluator Agent**, and **Response Generator Agent**. The system can use a search tool (via the TavilyClient) to gather additional context if the initial context is deemed insufficient.
+
+Components
+----------
+
+1. **TavilyClient**  
+   The `TavilyClient` is used to interface with an external service for search queries. It is initialized with an API key and can retrieve search context for a given query. The client is integrated into the system to provide additional context if needed.
+
+2. **LLM (Language Model)**  
+   Two LLM instances are defined with option to chose between:
+   -  An instance of the model "ollama/smollm:latest", which is hosted on a localy.
+   - Or a more complex LLM, "nvidia_nim/meta/llama-3.1-70b-instruct" This model is connected to the system via an API key.
+
+3. **Agents**
+   - **Orchestrator Agent**: Manages the workflow of the query processing. It coordinates the interactions between the Context Evaluator Agent and the Response Generator Agent, determining if the context is sufficient or if additional search results are needed.
+   - **Context Evaluator Agent**: Evaluates if the provided context is sufficient to answer a query or if more information should be gathered (i.e., via a web search).
+   - **Response Generator Agent**: Responsible for generating a comprehensive response to the query, incorporating all available context.
+
+4. **Task Management**
+   The system defines a sequence of tasks that agents perform:
+   - **Evaluation Task**: The Context Evaluator Agent checks whether the context is sufficient.
+   - **Search Task**: If the context is insufficient, the Orchestrator Agent triggers the Tavily search tool to gather more context.
+   - **Response Task**: The Response Generator Agent creates a final answer using the context and any additional search results.
+
+5. **Crew**: 
+   The `Crew` class groups agents and tasks together. It manages the execution flow and controls the interaction between agents during the query processing.
+
+Flow Diagram
+-------------
+The following steps outline how the system processes a query:
+
+1. **Agent Creation**:
+   - **Orchestrator**: Coordinates query processing, decides when additional context is needed, and triggers the search tool.
+   - **Context Evaluator**: Checks if the initial context is sufficient for answering the query.
+   - **Response Generator**: Generates the final response based on available context.
+
+2. **Task Execution**:
+   - **Evaluation Task**: The Context Evaluator evaluates whether the provided context is sufficient to answer the query.
+   - **Search Task**: If the context is insufficient, the Orchestrator uses the TavilyClient's search functionality to retrieve additional context from the web.
+   - **Response Task**: Once enough context is available, the Response Generator creates and returns a final, well-structured response.
+
+3. **Workflow Execution**:
+   The `Crew` class orchestrates the agents' activities in the following order:
+   - First, the Context Evaluator checks the sufficiency of the context.
+   - If the context is insufficient, the Orchestrator Agent triggers the web search to retrieve more context.
+   - After obtaining the necessary context, the Response Generator creates and returns a final, well-structured response.
+
+
 
