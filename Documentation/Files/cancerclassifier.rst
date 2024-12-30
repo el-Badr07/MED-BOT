@@ -75,7 +75,8 @@ However, further testing on a separate test set would provide additional confirm
 
 *Confusion Matrix*:
 
-[Add confusion matrix details or image]
+.. image:: Confusion_matrics.png
+  :alt
 
 Evaluating the Model
 --------------------
