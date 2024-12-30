@@ -24,15 +24,19 @@ In this project, we have 4 classes: *meningioma, **glioma, **pituitary, and **no
 
 *For training*:
 
-.. image:: Count_of_each_class_training.png
+.. image:: images/Count_of_each_class_training.png
    :alt: Count of images in each class
    :align: center
+   :width: 38%
+
 
 *For testing*:
 
-.. image:: Count_of_each_class_testing.png
+.. image:: images/Count_of_each_class_testing.png
    :alt: Count of images in each class
    :align: center
+   :width: 38%
+
 
 Next, we will split the test data into test and validation sets with a split ratio of 0.5.
 
@@ -46,9 +50,11 @@ To preprocess image data for training, validation, and testing, we are using the
 
 Here are some samples from preprocessed data:
 
-.. image:: Samples_of_preprocessed_data.png
+.. image:: images/Samples_of_preprocessed_data.png
    :alt: Preprocessed MRI image samples
    :align: center
+   :width: 38%
+
 
 Model Architecture
 -------------------
@@ -59,9 +65,11 @@ The Xception model is a deep convolutional neural network architecture that buil
 
 *Building the model*:
 
-.. image:: Building_model.png
+.. image:: images/Building_model.png
    :alt: Building the model process
    :align: center
+   :width: 38%
+
 
 
 We opted for the Adam optimizer with a learning rate of 0.001.
@@ -77,9 +85,11 @@ The training process involves teaching the model to improve its performance over
 
 Throughout the training, metrics like *accuracy* and *loss* are tracked, allowing for adjustments to improve the model's performance and avoid overfitting.
 
-.. image:: Training_model.png
+.. image:: images/Training_model.png
    :alt: Model training performance metrics
    :align: center
+   :width: 38%
+
 
 Results
 -------
@@ -90,25 +100,31 @@ This high accuracy indicates that the model is able to correctly predict nearly 
 
 However, further testing on a separate test set would provide additional confirmation of the model's robustness.
 
-.. image:: results.png
+.. image:: images/results.png
    :alt: Training and validation results
    :align: center
+   :width: 38%
 
 *Confusion Matrix*:
 
-.. image:: Confusion_matrics.png
+.. figure:: images/Confusion_matrics.png
    :alt: Confusion matrix for model evaluation
    :align: center
+   :width: 38%
+
 
 Evaluating the Model
 --------------------
 
 Evaluating a model involves testing its performance on a separate dataset that it hasn't seen during training.
 
-.. image:: Evaluating_1.png
+.. image:: images/Evaluating_1.png
    :alt: evaluation result
    :align: center
+   :width: 35%
 
-.. image:: Evaluating_2.png
+.. image:: images/Evaluating_2.png
    :alt: evaluation result
    :align: center
+   :width: 38%
+
