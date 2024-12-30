@@ -27,7 +27,7 @@ In this project, we have 4 classes: *meningioma, **glioma, **pituitary, and **no
 .. image:: images/Count_of_eacch_class_training.png
    :alt: Count of images in each class
    :align: center
-   :width: 38%
+   :width: 43%
 
 
 *For testing*:
@@ -35,7 +35,7 @@ In this project, we have 4 classes: *meningioma, **glioma, **pituitary, and **no
 .. image:: images/Count_of_each_class_testing.png
    :alt: Count of images in each class
    :align: center
-   :width: 38%
+   :width: 43%
 
 
 Next, we will split the test data into test and validation sets with a split ratio of 0.5.
@@ -53,7 +53,7 @@ Here are some samples from preprocessed data:
 .. image:: images/Samples_of_preprocessed_data.png
    :alt: Preprocessed MRI image samples
    :align: center
-   :width: 38%
+   :width: 43%
 
 
 Model Architecture
@@ -68,7 +68,7 @@ The Xception model is a deep convolutional neural network architecture that buil
 .. image:: images/Building_model.png
    :alt: Building the model process
    :align: center
-   :width: 38%
+   :width: 43%
 
 
 
@@ -88,7 +88,7 @@ Throughout the training, metrics like *accuracy* and *loss* are tracked, allowin
 .. image:: images/Training_model.png
    :alt: Model training performance metrics
    :align: center
-   :width: 38%
+   :width: 46%
 
 
 Results
@@ -103,14 +103,14 @@ However, further testing on a separate test set would provide additional confirm
 .. image:: images/results.png
    :alt: Training and validation results
    :align: center
-   :width: 38%
+   :width: 46%
 
 *Confusion Matrix*:
 
 .. figure:: images/Confusion_matrics.png
    :alt: Confusion matrix for model evaluation
    :align: center
-   :width: 38%
+   :width: 40%
 
 
 Evaluating the Model
@@ -121,10 +121,10 @@ Evaluating a model involves testing its performance on a separate dataset that i
 .. image:: images/Evaluating_1.png
    :alt: evaluation result
    :align: center
-   :width: 35%
+   :width: 32%
 
 .. image:: images/Evaluating_2.png
    :alt: evaluation result
    :align: center
-   :width: 38%
+   :width: 42%
 
