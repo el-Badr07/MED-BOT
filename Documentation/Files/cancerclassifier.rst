@@ -24,7 +24,7 @@ In this project, we have 4 classes: *meningioma, **glioma, **pituitary, and **no
 
 *For training*:
 
-.. image:: images/Count_of_each_class_training.png
+.. image:: images/Count_of_eacch_class_training.png
    :alt: Count of images in each class
    :align: center
    :width: 38%
